@@ -54,7 +54,7 @@ gulp.task('js-minify', function() {
 
 // Image Compression
 gulp.task('img-compression', function() {
-  gulp.src('./img/*')
+  gulp.src('./img/*.*')
     .pipe(imagemin([
       imagemin.gifsicle({interlaced: true}),
       imagemin.jpegtran({progressive: true}),
@@ -89,7 +89,7 @@ gulp.task('default', function() {
   gulp.watch(["dist/css/*.css", "!dist/css/*.min.css"], ['css-minify']);
   gulp.watch("js/**/*.js", ['js-build']);
   gulp.watch(["dist/js/*.js", "!dist/js/*.min.js"], ['js-minify']);
-  gulp.watch("**/*", {cwd: './img/'}, ['img-compression']);
+  gulp.watch("**/*.*", {cwd: './img/'}, ['img-compression']);
 });
 
 function getJSModules() {

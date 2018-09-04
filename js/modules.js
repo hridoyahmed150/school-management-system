@@ -4,6 +4,7 @@ exports.modules = [
   './js/vendor/velocity.min.js',
   './js/vendor/chart.js',
   './js/vendor/wow.js',
+  './js/vendor/waves.min.js',
   './js/dist/scrolling-navbar.js',
   './js/vendor/waves.js',
   './js/dist/forms-free.js',
