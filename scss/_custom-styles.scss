@@ -84,10 +84,36 @@
 			.wrap{
 				margin: 70px 200px 70px 50px ;
 				h5{
-				font-size: 15px;
-				text-transform: uppercase;
-				font-weight: bold;
-				opacity: .5;
+					font-size: 13px;
+					text-transform: uppercase;
+					font-weight: bold;
+					opacity: .5;
+					padding-left: 25px;
+					position: relative;
+					@extend %fa-icon;
+					@extend .fab;
+					&:before {
+					   content: fa-content(\f005);
+					   font-family: FontAwesome;
+					   position: absolute;
+					   top: 0;
+					   left: 0;
+					   color: $red;
+
+					  }
+					&:after {
+						content: fa-content(\f005);
+					   	font-family: FontAwesome;
+					   	position: absolute;
+					   	top: 0;
+					   	color: $red;
+						right: -20px;
+					}
+				}
+				h2{
+					font-size: 30px;
+					opacity: .8;
+					text-transform: uppercase;
 				}
 				button{
 					color: green;
